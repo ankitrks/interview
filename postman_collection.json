@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "d9d60f0a-55a0-484d-b73f-5b9a80d0cfbb",
+		"name": "Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Photos API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/photos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"photos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Photo API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Pic 4\",\n    \"image_file\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw3RRJdYkO92S-yrgsEM3EpD&ust=1610382132195000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODa54njke4CFQAAAAAdAAAAABAD12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/photos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"photos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Album API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/album/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"album",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Album API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/album/2/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"album",
+								"2",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Jan 2021 14:52:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"created_at\": \"2021-01-10T14:50:54.243388Z\",\n    \"updated_at\": \"2021-01-10T14:50:54.247713Z\",\n    \"is_active\": true,\n    \"title\": \"My Album\",\n    \"uploaded_by\": 1,\n    \"images\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Album API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"My Album\",\n    \"images\": [1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/album/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"album",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Album API",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"My Album\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/album/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"album",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Jan 2021 14:50:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"created_at\": \"2021-01-10T14:50:54.243388Z\",\n    \"updated_at\": \"2021-01-10T14:50:54.247713Z\",\n    \"is_active\": true,\n    \"title\": \"My Album\",\n    \"uploaded_by\": 1,\n    \"images\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Album API (Add images)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"My Album 1\",\n    \"images\": [2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/album/1/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"album",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Album API",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"My Album\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/album/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"album",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Jan 2021 14:50:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"created_at\": \"2021-01-10T14:50:54.243388Z\",\n    \"updated_at\": \"2021-01-10T14:50:54.247713Z\",\n    \"is_active\": true,\n    \"title\": \"My Album\",\n    \"uploaded_by\": 1,\n    \"images\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Album API (Add images, Delete existing)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"My Album 2\",\n    \"images\": [2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/album/1/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"album",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Album API",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"My Album\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/album/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"album",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Jan 2021 14:50:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"created_at\": \"2021-01-10T14:50:54.243388Z\",\n    \"updated_at\": \"2021-01-10T14:50:54.247713Z\",\n    \"is_active\": true,\n    \"title\": \"My Album\",\n    \"uploaded_by\": 1,\n    \"images\": []\n}"
+				}
+			]
+		}
+	]
+}
